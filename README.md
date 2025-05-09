@@ -76,11 +76,13 @@ REACT_APP_SUPABASE_KEY=<Chave anônima do Supabase>
    npm start
    ```
 
-4. Abra a URL que aparece no terminal (geralmente `http://localhost:3000`) no navegador.
+4. Abra a URL `http://localhost:3000` no navegador.
 
 ---
 
 ## 🔄 Testando a Sincronização em Tempo Real
+![image](https://github.com/user-attachments/assets/b52fca98-1830-4a43-a706-8ee849d9ebf3)
+
 
 1. **Abra o aplicativo em múltiplas janelas ou abas do navegador.**
    - Copie e cole a URL do aplicativo em mais de uma aba ou instância do navegador.
