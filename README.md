@@ -76,7 +76,7 @@ REACT_APP_SUPABASE_KEY=<Chave anônima do Supabase>
    npm start
    ```
 
-4. Abra a URL que aparece no terminal (geralmente `http://localhost:3000`) no navegador.
+4. Abra a URL `http://localhost:3000` no navegador.
 
 ---
 
