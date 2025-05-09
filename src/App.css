@@ -1,33 +1,33 @@
 :root {
-  --primary-color: #1DB954;
-  --secondary-color: #34E075;
-  --highlight-color: #1DB954;
-  --card-background: #FFFFFF; 
-  --background: #F9FAFB; 
-  --text-color: #111827; 
-  --border-color: #E5E7EB; 
-  --shadow-color: rgba(0, 0, 0, 0.1); 
+  --primary-color: #1db954;
+  --secondary-color: #34e075;
+  --highlight-color: #1db954;
+  --card-background: #ffffff;
+  --background: #f9fafb;
+  --text-color: #111827;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 .task-list {
   display: grid;
   gap: 1rem;
   max-height: 350px;
-  overflow-y: auto; 
-  padding-right: 0.5rem; 
+  overflow-y: auto;
+  padding-right: 0.5rem;
 }
 
 .task-list::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 .task-list::-webkit-scrollbar-thumb {
-  background-color: var(--secondary-color); 
-  border-radius: 4px; 
+  background-color: var(--secondary-color);
+  border-radius: 4px;
 }
 
 .task-list::-webkit-scrollbar-thumb:hover {
-  background-color: var(--primary-color); 
+  background-color: var(--primary-color);
 }
 * {
   box-sizing: border-box;
@@ -36,7 +36,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
   line-height: 1.6;
   background-color: var(--background);
   color: var(--text-color);
@@ -256,19 +256,18 @@ body {
   .container {
     padding: 1rem;
   }
-  
+
   .task-card {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .task-actions {
     width: 100%;
     flex-wrap: wrap;
   }
-  
+
   .btn {
     flex: 1;
   }
-
 }
