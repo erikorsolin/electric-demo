@@ -32,6 +32,12 @@ jobs:
         run: npm ci
 
       - name: Build with Vite
+        env:
+          VITE_ELECTRIC_API_URL: ${{ secrets.VITE_ELECTRIC_API_URL }}
+          VITE_ELECTRIC_SOURCE_ID: ${{ secrets.VITE_ELECTRIC_SOURCE_ID }}
+          VITE_ELECTRIC_SOURCE_SECRET: ${{ secrets.VITE_ELECTRIC_SOURCE_SECRET }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_KEY: ${{ secrets.VITE_SUPABASE_KEY }}
         run: npm run build
 
       - name: Setup Pages
@@ -52,9 +58,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        env:
-          VITE_ELECTRIC_API_URL: ${{ secrets.VITE_ELECTRIC_API_URL }}
-          VITE_ELECTRIC_SOURCE_ID: ${{ secrets.VITE_ELECTRIC_SOURCE_ID }}
-          VITE_ELECTRIC_SOURCE_SECRET: ${{ secrets.VITE_ELECTRIC_SOURCE_SECRET }}
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_KEY: ${{ secrets.VITE_SUPABASE_KEY }}
