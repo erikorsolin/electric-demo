@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import logo from './assets/logo.png';
 
-
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
 const supabaseKey = process.env.REACT_APP_SUPABASE_KEY; 
 const supabase = createClient(supabaseUrl, supabaseKey);
