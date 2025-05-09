@@ -6,7 +6,7 @@ Este projeto é uma **demonstração** do poder de sincronização em tempo real
 
 ---
 
-## 🛠️ Configuração do Ambiente
+## Configuração do Ambiente
 
 Siga as instruções abaixo para configurar o projeto e experimentar a sincronização em tempo real:
 
@@ -58,7 +58,7 @@ VITE_SUPABASE_KEY=<Chave anônima do Supabase>
 
 ---
 
-## 🖥️ Como Executar o Projeto
+## Como Executar o Projeto
 
 1. Clone este repositório:
    ```bash
@@ -81,7 +81,7 @@ VITE_SUPABASE_KEY=<Chave anônima do Supabase>
 ---
 
 
-## 🔄 Testando a Sincronização em Tempo Real
+## Testando a Sincronização em Tempo Real
 
 
 1. **Abra o aplicativo em múltiplas janelas ou abas do navegador.**
@@ -95,7 +95,7 @@ VITE_SUPABASE_KEY=<Chave anônima do Supabase>
 
 ---
 
-## 🧩 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - [React](https://reactjs.org/) - UI.
 - [ElectricSQL](https://electric-sql.com/) - Sync Engine.
