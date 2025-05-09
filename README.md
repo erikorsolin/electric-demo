@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# 🚀 ElectricSQL Sync Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma **demonstração** do poder de sincronização em tempo real do **[ElectricSQL](https://electric-sql.com/)**, um motor de sincronização que permite a replicação de dados em múltiplos dispositivos, utilizando o Supabase como backend. 
 
-## Available Scripts
+> ⚡️ **Objetivo**: Demonstrar como criar, modificar e sincronizar tarefas em tempo real entre diferentes clientes.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠️ Configuração do Ambiente
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Siga as instruções abaixo para configurar o projeto e experimentar a sincronização em tempo real:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. **Criar uma conta no Supabase**
+- Acesse [Supabase](https://supabase.com/) e crie uma conta gratuita.
+- Crie um novo projeto no Supabase.
+- No projeto, vá até a aba **SQL** e execute o seguinte script para criar a tabela `todos`:
 
-### `npm test`
+```sql
+CREATE TABLE todos (
+  id UUID PRIMARY KEY,
+  task TEXT NOT NULL,
+  is_completed BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. **Obter as credenciais do Supabase**
+- Vá até a aba **Settings > API** no painel do Supabase.
+- Copie os valores de:
+  - **URL do banco de dados** 
+  - **Chave anônima (anon key)**
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. **Criar uma conta no ElectricSQL**
+- Acesse [ElectricSQL Cloud](https://electric-sql.com/) e crie uma conta.
+- No painel do ElectricSQL, configure uma nova conexão com o banco de dados:
+  1. Insira a **string de conexão** do seu banco de dados Supabase.
+  2. Após configurar, o ElectricSQL fornecerá:
+     - **API URL**
+     - **Source ID**
+     - **Source Secret**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. **Configurar variáveis de ambiente**
+Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
 
-### `npm run eject`
+```env
+REACT_APP_ELECTRIC_API_URL=<API URL fornecida pelo ElectricSQL>
+REACT_APP_ELECTRIC_SOURCE_ID=<Source ID fornecido pelo ElectricSQL>
+REACT_APP_ELECTRIC_SOURCE_SECRET=<Source Secret fornecido pelo ElectricSQL>
+REACT_APP_SUPABASE_URL=<URL do Supabase>
+REACT_APP_SUPABASE_KEY=<Chave anônima do Supabase>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+⚠️ **Importante**: Nunca compartilhe suas credenciais em repositórios públicos.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🖥️ Como Executar o Projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/erikorsolin/electric-sync-demo.git
+   cd electric-sync-demo
+   ```
 
-## Learn More
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Abra a URL que aparece no terminal (geralmente `http://localhost:3000`) no navegador.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔄 Testando a Sincronização em Tempo Real
 
-### Analyzing the Bundle Size
+1. **Abra o aplicativo em múltiplas janelas ou abas do navegador.**
+   - Copie e cole a URL do aplicativo em mais de uma aba ou instância do navegador.
+   
+2. **Crie ou modifique tarefas.**
+   - Adicione, edite ou exclua tarefas em uma das instâncias.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Observe a mágica da sincronização.**
+   - Todas as alterações realizadas em uma aba serão refletidas em tempo real nas outras instâncias, sem a necessidade de recarregar a página! 🎉
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🧩 Tecnologias Utilizadas
 
-### Advanced Configuration
+- [React](https://reactjs.org/) - Biblioteca para interfaces de usuário.
+- [ElectricSQL](https://electric-sql.com/) - Motor de sincronização de dados.
+- [Supabase](https://supabase.com/) - Banco de dados como serviço.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
