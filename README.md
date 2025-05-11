@@ -47,7 +47,7 @@ CREATE TABLE todos (
 Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
 
 ```env
-VITE_ELECTRIC_API_URL=<URL fornecida pelo ElectricSQL>
+VITE_ELECTRIC_API_URL='https://api.electric-sql.cloud/v1/shape'
 VITE_ELECTRIC_SOURCE_ID=<Source ID fornecido pelo ElectricSQL>
 VITE_ELECTRIC_SOURCE_SECRET=<Source Secret fornecido pelo ElectricSQL>
 VITE_SUPABASE_URL=<URL do Supabase>
