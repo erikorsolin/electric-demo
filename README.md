@@ -54,7 +54,7 @@ VITE_SUPABASE_URL=<URL do Supabase>
 VITE_SUPABASE_KEY=<Chave anônima do Supabase>
 ```
 
-⚠️ **Importante**: Nunca compartilhe suas credenciais em repositórios públicos.
+⚠️ **Importante**: Nunca compartilhe suas credenciais privadas.
 
 ---
 
