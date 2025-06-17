@@ -5,6 +5,7 @@ Este projeto é uma **demonstração** do poder de sincronização em tempo real
 > ⚡️ **Objetivo**: Demonstrar o funcionamento da tecnologia ElectricSQL.
 
 ---
+Acesse os [slides](https://www.figma.com/deck/n9TuZrpgtLOY3WZddZfNxs/Sync-Engines?node-id=1-44&t=Crfi951Gkba8Z4rp-1) da nossa apresentação no Figma. 
 
 ## Configuração do Ambiente
 
